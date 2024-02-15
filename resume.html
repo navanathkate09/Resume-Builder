@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resume.css">
+    <title>Resume Generator</title>
+</head>
+
+<body></body>
+
+<div class="resume-form">
+    <h1>Resume Generator</h1>
+    <div class="container">
+        <div class="personal-info">
+            <h3>personal-info</h3>
+            <div>
+                <label for="">enter your name</label>
+                <input type="text" name="" id="nameField" placeholder="Name">
+            </div>
+            <div>
+                <label for="">job title</label>
+                <input type="text" placeholder="Job Title" id="jobTitle">
+            </div>
+            <div>
+                <label for="profileImg">select your profile image</label>
+                <input type="file" name="" id="profileImg">
+            </div>
+            <div>
+                <label for="">email id</label>
+                <input type="email" placeholder="Email" id="emailField">
+            </div>
+            <div>
+                <label for="">contact number</label>
+                <input type="number" id="contactField">
+            </div>
+            <div>
+                <label for="">portfolio url</label>
+                <input type="url" id="portfolioField">
+            </div>
+            <div>
+                <label for="">linkdin</label>
+                <input type="url" name="" id="linkdinField">
+            </div>
+            <div>
+                <label for="">github</label>
+                <input type="url" name="" id="githubField">
+            </div>
+            <div>
+                <label for="">about</label>
+                <textarea name="" id="aboutField" cols="30" rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="profesional-info">
+            <h3>profesional-info</h3>
+            <div class="edudiv">
+                <label for="education">education</label>
+                <textarea name="" class="eduField" cols="30" rows="4"></textarea>
+                <div class="addmore edubtn">
+                    <button onclick="eduadd()" class="addbtn"><img src="" alt="">Add</button>
+                </div>
+            </div>
+            <div class="expdiv">
+                <label for="">profesional experience</label>
+                <textarea name="" class="expField" cols="30" rows="4"></textarea>
+                <div class="addmore expbtn">
+                    <button onclick="expadd()" class="addbtn"><img src="" alt="">Add</button>
+                </div>
+            </div>
+            <div class="skilldiv">
+                <label for="skill">skill</label>
+                <input type="text" name="" class="skillField">
+                <div class="addmore skillbtn">
+                    <button onclick="skilladd()" class="addbtn"><img src="" alt="">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="generatediv">
+        <button class="generatebtn">Generate Resume</button>
+    </div>
+
+</div>
+
+<div class="resume-template">
+    <div class="resume-wrap">
+        <!-- first column -->
+        <div class="left-side">
+            <div class="profile">
+
+                <img src="images/passportsizephoto1.jpg" alt="" id="imgT">
+            </div>
+            <div class="person-data">
+                <h1 id="nameT">Navanath kate</h1>
+                <h3 id="jobtitleT">Frontend Developer</h3>
+                <hr>
+                <p id="contactT">9373439422</p>
+                <p><a href="#" id="emailT">email</a></p>
+                <p><a href="#" id="portfolioT">Portfolio</a></p>
+                <p><a href="#" id="linkdinT">linkdin</a></p>
+                <p><a href="#" id="githubT">GitHub</a></p>
+            </div>
+            <div class="about">
+                <h2>about</h2>
+                <p id="aboutT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptates esse accusamus
+                    sapiente saepe
+                    tenetur neque? Veritatis architecto a numquam!</p>
+            </div>
+        </div>
+        <!-- second column -->
+        <div class="right-side">
+            <div class="education-sec">
+                <div class="education-header">
+                    <h2>education</h2>
+                </div>
+                <div class="education-body">
+                    <ul id="eduT">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-sec">
+                <div class="skill-header">
+                    <h2>skill</h2>
+                </div>
+                <div class="skill-body">
+                    <ul id="skillT">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work-sec">
+                <div class="work-header">
+                    <h2>work experience</h2>
+                </div>
+                <div class="work-body">
+                    <ul id="expT">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="template-btn">
+        <button class="pdf-btn">Download PDF</button>
+    </div>
+</div>
+
+<footer></footer>
+
+<script src="resume.js"></script>
+</body>
+
+</html>

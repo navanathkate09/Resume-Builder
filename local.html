@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LocaleStorage Examples</h1>
+    <input type="text" name="" id="inputTxt">
+    <button id="storeData">store data</button>
+    <button id="clearData">Clear data</button>
+
+    <script>
+        console.log('script...')
+        let inputTxt = document.getElementById('inputTxt');
+        
+        document.getElementById('storeData').addEventListener('click',(e)=>{
+           console.log(e)
+         localStorage.setItem('key',JSON.stringify(inputTxt.value)) ;
+         console.log(localStorage.getItem('key')) 
+            
+        })
+        document.getElementById('clearData').addEventListener('click',()=>{
+            localStorage.clear()
+            console.log(localStorage.getItem('key')) 
+
+        })
+        // alert(localStorage.getItem('key'))
+    
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Storage Example</title>
+</head>
+<body>
+
+<label for="inputValue">Enter a value:</label>
+<input type="text" id="inputValue">
+<button id="saveButton">Save to Local Storage</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the input box and button
+    var inputBox = document.getElementById("inputValue");
+    var saveButton = document.getElementById("saveButton");
+    let n= 1;
+    // Function to save value to localStorage with a unique key
+    function saveValueToLocalStorage() {
+        var valueToSave = inputBox.value;
+        var timestamp = new Date().getTime(); // Get current timestamp
+        var key = "key" + (n+1) // Generate unique key
+        localStorage.setItem(key, valueToSave);
+    }
+    
+    // Add click event listener to the button
+    saveButton.addEventListener("click", saveValueToLocalStorage);
+    
+});
+</script>
+
+</body>
+</html>
